@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemetaan Kolom - Analisis Association Rules</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .table-preview {
+            font-size: 0.8rem;
+            max-height: 250px;
+            overflow-y: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-label-bold {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <i class="fa-solid fa-chart-line text-indigo me-2"></i>
+                <span class="fw-bold">Association Rules Analysis</span>
+            </a>
+            <span class="navbar-text text-white-50">
+                <i class="fa-solid fa-file-csv me-1"></i> {{ filename }}
+            </span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-10">
+
+                <div class="card card-premium border-0 mb-4">
+                    <div class="card-header-gradient text-white p-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-gears fa-2x"></i>
+                            <div>
+                                <h4 class="fw-bold mb-0">Petakan Kolom Dataset Anda</h4>
+                                <p class="mb-0 opacity-75 small">Sesuaikan kolom pada file Anda agar dapat diolah oleh
+                                    algoritma Apriori &amp; FP-Growth</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+                        <!-- Data Preview Section -->
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3 text-dark">
+                                <i class="fa-solid fa-table me-2 text-indigo"></i>Pratinjau Data (5 Baris Pertama)
+                            </h5>
+                            <div class="table-preview bg-white shadow-sm">
+                                <table class="table table-hover table-striped mb-0">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            {% for col in columns %}
+                                            <th>{{ col }}</th>
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in preview_data %}
+                                        <tr>
+                                            {% for col in columns %}
+                                            <td>{{ row[col] }}</td>
+                                            {% endfor %}
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-text small text-muted mt-2">
+                                Silakan lihat tabel di atas untuk memetakan kolom transaksi, produk, dan kategori.
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- Column Mapping Form -->
+                        <form action="/process" method="POST">
+                            <!-- Hidden inputs for file reference -->
+                            <input type="hidden" name="unique_filename" value="{{ unique_filename }}">
+                            <input type="hidden" name="original_filename" value="{{ filename }}">
+
+                            <h5 class="fw-bold mb-4 text-dark">
+                                <i class="fa-solid fa-map-location-dot me-2 text-indigo"></i>Pengaturan Kolom &amp;
+                                Parameter
+                            </h5>
+
+                            <div class="row g-4 mb-4">
+                                <!-- Transaction ID Mapping -->
+                                <div class="col-md-4">
+                                    <label class="form-label form-label-bold">
+                                        <i class="fa-solid fa-receipt me-1 text-primary"></i>ID Transaksi / No. Nota
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <select name="bill_col" class="form-select border-2" required>
+                                        <option value="" disabled>-- Pilih Kolom --</option>
+                                        {% for col in columns %}
+                                        <option value="{{ col }}" {% if col==detected_bill %}selected{% endif %}>{{ col
+                                            }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <div class="form-text small text-muted">
+                                        Kolom yang mengelompokkan barang belanjaan (misal: No Struk, Bill Number, ID
+                                        Transaksi).
+                                    </div>
+                                </div>
+
+                                <!-- Product Name Mapping -->
+                                <div class="col-md-4">
+                                    <label class="form-label form-label-bold">
+                                        <i class="fa-solid fa-box-open me-1 text-success"></i>Nama Produk / Barang <span
+                                            class="text-danger">*</span>
+                                    </label>
+                                    <select name="name_col" class="form-select border-2" required>
+                                        <option value="" disabled>-- Pilih Kolom --</option>
+                                        {% for col in columns %}
+                                        <option value="{{ col }}" {% if col==detected_name %}selected{% endif %}>{{ col
+                                            }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <div class="form-text small text-muted">
+                                        Kolom berisi nama produk atau item yang dibeli (misal: Product Name, Item, Nama
+                                        Barang).
+                                    </div>
+                                </div>
+
+                                <!-- Product Category Mapping -->
+                                <div class="col-md-4">
+                                    <label class="form-label form-label-bold">
+                                        <i class="fa-solid fa-tags me-1 text-warning"></i>Kategori Produk <span
+                                            class="text-muted">(Opsional)</span>
+                                    </label>
+                                    <select name="category_col" class="form-select border-2">
+                                        <option value="none">-- Tanpa Kategori / Default --</option>
+                                        {% for col in columns %}
+                                        <option value="{{ col }}" {% if col==detected_category %}selected{% endif %}>{{
+                                            col }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <div class="form-text small text-muted">
+                                        Kolom pengelompokan produk (misal: Category, Kategori). Jika kosong, akan
+                                        dikategorikan sebagai "Umum".
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-5">
+                                <!-- Minimum Support Input -->
+                                <div class="col-sm-6">
+                                    <label class="form-label fw-bold text-dark"><i
+                                            class="fa-solid fa-filter me-2 text-indigo"></i>Min. Support</label>
+                                    <input type="number" step="any" min="0" max="1.0" name="min_support" value="0.02"
+                                        class="form-control border-2" required>
+                                    <div class="form-text small text-muted">
+                                        Contoh: 0.02 (2% dari total transaksi)
+                                    </div>
+                                </div>
+
+                                <!-- Minimum Confidence Input -->
+                                <div class="col-sm-6">
+                                    <label class="form-label fw-bold text-dark"><i
+                                            class="fa-solid fa-percent me-2 text-indigo"></i>Min. Confidence</label>
+                                    <input type="number" step="any" min="0" max="1.0" name="min_confidence" value="0.30"
+                                        class="form-control border-2" required>
+                                    <div class="form-text small text-muted">
+                                        Contoh: 0.30 (30% keandalan aturan)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                class="btn btn-primary btn-lg w-100 py-3 rounded-pill fw-bold shadow-sm border-0 d-flex align-items-center justify-content-center gap-2"
+                                style="background: var(--primary-gradient);">
+                                <i class="fa-solid fa-play"></i> Mulai Analisis &amp; Bandingkan Algoritma
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="card-footer bg-light text-center py-3 border-0 small text-muted">
+                        Aplikasi Pendukung Keputusan | Skripsi Mulya Adi Saputra &copy; 2026
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

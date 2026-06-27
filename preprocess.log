@@ -1,0 +1,226 @@
+2026-06-27 02:21:41,392 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.231:5000
+2026-06-27 02:21:41,392 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-27 02:21:41,394 - INFO -  * Restarting with stat
+2026-06-27 02:21:43,644 - WARNING -  * Debugger is active!
+2026-06-27 02:21:43,806 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 02:21:46,795 - INFO - 127.0.0.1 - - [27/Jun/2026 02:21:46] "GET / HTTP/1.1" 200 -
+2026-06-27 02:21:47,040 - INFO - 127.0.0.1 - - [27/Jun/2026 02:21:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 02:21:57,288 - INFO - 127.0.0.1 - - [27/Jun/2026 02:21:57] "POST /upload HTTP/1.1" 200 -
+2026-06-27 02:21:57,311 - INFO - 127.0.0.1 - - [27/Jun/2026 02:21:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 02:22:06,107 - INFO - Starting preprocessing for file: uploads\cd00f7c27b91410eb71ce90907c05f57.csv
+2026-06-27 02:22:15,595 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 02:22:19,285 - INFO - 127.0.0.1 - - [27/Jun/2026 02:22:19] "POST /process HTTP/1.1" 200 -
+2026-06-27 02:22:19,311 - INFO - 127.0.0.1 - - [27/Jun/2026 02:22:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 02:22:45,650 - INFO - Starting preprocessing for file: uploads\cd00f7c27b91410eb71ce90907c05f57.csv
+2026-06-27 02:22:58,065 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 02:22:59,182 - INFO - 127.0.0.1 - - [27/Jun/2026 02:22:59] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-27 22:54:48,570 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.231:5000
+2026-06-27 22:54:48,616 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-27 22:54:48,621 - INFO -  * Restarting with stat
+2026-06-27 22:54:56,159 - WARNING -  * Debugger is active!
+2026-06-27 22:54:56,184 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 22:55:42,101 - INFO - 127.0.0.1 - - [27/Jun/2026 22:55:42] "GET / HTTP/1.1" 200 -
+2026-06-27 22:55:42,588 - INFO - 127.0.0.1 - - [27/Jun/2026 22:55:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 22:55:43,393 - INFO - 127.0.0.1 - - [27/Jun/2026 22:55:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-27 22:55:51,810 - INFO - 127.0.0.1 - - [27/Jun/2026 22:55:51] "POST /upload HTTP/1.1" 200 -
+2026-06-27 22:55:51,836 - INFO - 127.0.0.1 - - [27/Jun/2026 22:55:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 22:56:00,432 - INFO - Starting preprocessing for file: uploads\08b538d4de8e4def925aa9de092021f1.csv
+2026-06-27 22:56:14,237 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 22:56:21,506 - INFO - 127.0.0.1 - - [27/Jun/2026 22:56:21] "POST /process HTTP/1.1" 200 -
+2026-06-27 22:56:21,534 - INFO - 127.0.0.1 - - [27/Jun/2026 22:56:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:01:56,754 - INFO -  * Detected change in 'D:\\Putra\\Skripsi\\association-rules\\services\\preprocessing.py', reloading
+2026-06-27 23:02:00,725 - INFO -  * Restarting with stat
+2026-06-27 23:02:03,246 - WARNING -  * Debugger is active!
+2026-06-27 23:02:03,297 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 23:02:06,361 - INFO -  * Detected change in 'D:\\Putra\\Skripsi\\association-rules\\app.py', reloading
+2026-06-27 23:02:07,039 - INFO -  * Restarting with stat
+2026-06-27 23:02:08,677 - WARNING -  * Debugger is active!
+2026-06-27 23:02:08,683 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 23:03:12,597 - INFO - Starting preprocessing for file: uploads\08b538d4de8e4def925aa9de092021f1.csv
+2026-06-27 23:03:24,940 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 23:03:30,348 - INFO - 127.0.0.1 - - [27/Jun/2026 23:03:30] "POST /process HTTP/1.1" 200 -
+2026-06-27 23:03:30,664 - INFO - 127.0.0.1 - - [27/Jun/2026 23:03:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:06:25,594 - INFO - Starting preprocessing for file: uploads\08b538d4de8e4def925aa9de092021f1.csv
+2026-06-27 23:06:35,941 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 23:06:37,496 - INFO - 127.0.0.1 - - [27/Jun/2026 23:06:37] "POST /process HTTP/1.1" 200 -
+2026-06-27 23:06:37,591 - INFO - 127.0.0.1 - - [27/Jun/2026 23:06:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:13:43,165 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.231:5000
+2026-06-27 23:13:43,222 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-27 23:13:43,226 - INFO -  * Restarting with stat
+2026-06-27 23:13:44,869 - WARNING -  * Debugger is active!
+2026-06-27 23:13:45,320 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 23:19:19,137 - INFO - Starting preprocessing for file: uploads\08b538d4de8e4def925aa9de092021f1.csv
+2026-06-27 23:19:27,452 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 23:19:31,960 - INFO - 127.0.0.1 - - [27/Jun/2026 23:19:31] "POST /process HTTP/1.1" 200 -
+2026-06-27 23:19:32,198 - INFO - 127.0.0.1 - - [27/Jun/2026 23:19:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:26:45,121 - INFO - Starting preprocessing for file: uploads\08b538d4de8e4def925aa9de092021f1.csv
+2026-06-27 23:26:54,087 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 23:26:55,440 - INFO - 127.0.0.1 - - [27/Jun/2026 23:26:55] "POST /process HTTP/1.1" 200 -
+2026-06-27 23:26:55,531 - INFO - 127.0.0.1 - - [27/Jun/2026 23:26:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:33:53,667 - INFO -  * Detected change in 'D:\\Putra\\Skripsi\\association-rules\\app.py', reloading
+2026-06-27 23:33:58,793 - INFO -  * Restarting with stat
+2026-06-27 23:34:02,444 - WARNING -  * Debugger is active!
+2026-06-27 23:34:02,452 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 23:35:07,823 - INFO - Starting preprocessing for file: uploads\08b538d4de8e4def925aa9de092021f1.csv
+2026-06-27 23:35:15,636 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 23:35:26,534 - INFO - 127.0.0.1 - - [27/Jun/2026 23:35:26] "POST /process HTTP/1.1" 200 -
+2026-06-27 23:35:26,824 - INFO - 127.0.0.1 - - [27/Jun/2026 23:35:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:39:43,737 - INFO -  * Detected change in 'D:\\Putra\\Skripsi\\association-rules\\app.py', reloading
+2026-06-27 23:39:49,970 - INFO -  * Restarting with stat
+2026-06-27 23:39:52,408 - WARNING -  * Debugger is active!
+2026-06-27 23:39:52,494 - INFO -  * Debugger PIN: 872-331-765
+2026-06-27 23:40:10,504 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:10] "GET / HTTP/1.1" 200 -
+2026-06-27 23:40:25,458 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:25] "GET / HTTP/1.1" 200 -
+2026-06-27 23:40:26,617 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:40:33,770 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:33] "POST /upload HTTP/1.1" 200 -
+2026-06-27 23:40:33,839 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-27 23:40:39,450 - INFO - Starting preprocessing for file: uploads\061777192d0e43efaa2ca6b2476ae9a5.csv
+2026-06-27 23:40:50,041 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-27 23:40:54,717 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:54] "POST /process HTTP/1.1" 200 -
+2026-06-27 23:40:54,756 - INFO - 127.0.0.1 - - [27/Jun/2026 23:40:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 00:57:50,616 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.231:5000
+2026-06-28 00:57:50,625 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-28 00:57:50,631 - INFO -  * Restarting with stat
+2026-06-28 00:57:52,673 - WARNING -  * Debugger is active!
+2026-06-28 00:57:52,679 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 00:58:08,764 - INFO - 127.0.0.1 - - [28/Jun/2026 00:58:08] "GET / HTTP/1.1" 200 -
+2026-06-28 00:58:09,052 - INFO - 127.0.0.1 - - [28/Jun/2026 00:58:09] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-28 00:58:22,172 - INFO - 127.0.0.1 - - [28/Jun/2026 00:58:22] "POST /upload HTTP/1.1" 200 -
+2026-06-28 00:58:22,281 - INFO - 127.0.0.1 - - [28/Jun/2026 00:58:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 00:58:27,362 - INFO - Starting preprocessing for file: uploads\7a3423868b294a2ab411b95dac9b64b3.csv
+2026-06-28 00:58:33,346 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 00:58:40,829 - INFO - 127.0.0.1 - - [28/Jun/2026 00:58:40] "POST /process HTTP/1.1" 200 -
+2026-06-28 00:58:40,863 - INFO - 127.0.0.1 - - [28/Jun/2026 00:58:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 01:41:28,465 - INFO - Starting preprocessing for file: uploads\7a3423868b294a2ab411b95dac9b64b3.csv
+2026-06-28 01:41:36,019 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 01:41:37,496 - INFO - 127.0.0.1 - - [28/Jun/2026 01:41:37] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 01:42:42,638 - INFO - Starting preprocessing for file: uploads\7a3423868b294a2ab411b95dac9b64b3.csv
+2026-06-28 01:42:46,714 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 01:42:47,559 - INFO - 127.0.0.1 - - [28/Jun/2026 01:42:47] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 01:47:17,683 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\services\\preprocessing.py', reloading
+2026-06-28 01:47:28,800 - INFO -  * Restarting with stat
+2026-06-28 01:47:37,091 - WARNING -  * Debugger is active!
+2026-06-28 01:47:37,194 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 01:47:46,755 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 01:47:48,010 - INFO -  * Restarting with stat
+2026-06-28 01:47:53,991 - WARNING -  * Debugger is active!
+2026-06-28 01:47:54,000 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 01:47:56,128 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 01:47:58,331 - INFO -  * Restarting with stat
+2026-06-28 01:51:07,153 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.231:5000
+2026-06-28 01:51:07,154 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-28 01:51:07,158 - INFO -  * Restarting with stat
+2026-06-28 01:51:08,445 - WARNING -  * Debugger is active!
+2026-06-28 01:51:08,451 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 01:51:15,952 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:15] "GET / HTTP/1.1" 200 -
+2026-06-28 01:51:16,255 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 01:51:17,162 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-28 01:51:23,455 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:23] "POST /upload HTTP/1.1" 200 -
+2026-06-28 01:51:23,551 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 01:51:29,482 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 01:51:37,708 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 01:51:52,714 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:52] "POST /process HTTP/1.1" 200 -
+2026-06-28 01:51:52,764 - INFO - 127.0.0.1 - - [28/Jun/2026 01:51:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 01:52:22,080 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 01:52:26,720 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 01:52:27,647 - INFO - 127.0.0.1 - - [28/Jun/2026 01:52:27] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 01:52:46,021 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 01:52:50,486 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 01:52:51,416 - INFO - 127.0.0.1 - - [28/Jun/2026 01:52:51] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 01:59:53,479 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\services\\preprocessing.py', reloading
+2026-06-28 01:59:57,446 - INFO -  * Restarting with stat
+2026-06-28 02:00:00,056 - WARNING -  * Debugger is active!
+2026-06-28 02:00:00,066 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:02:11,488 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:02:17,964 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:02:23,462 - INFO - 127.0.0.1 - - [28/Jun/2026 02:02:23] "POST /process HTTP/1.1" 200 -
+2026-06-28 02:02:23,802 - INFO - 127.0.0.1 - - [28/Jun/2026 02:02:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 02:03:59,814 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:04:03,950 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:04:04,870 - INFO - 127.0.0.1 - - [28/Jun/2026 02:04:04] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 02:08:56,988 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 02:08:59,963 - INFO -  * Restarting with stat
+2026-06-28 02:09:02,399 - WARNING -  * Debugger is active!
+2026-06-28 02:09:02,408 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:10:28,635 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:10:32,978 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:10:41,630 - INFO - 127.0.0.1 - - [28/Jun/2026 02:10:41] "POST /process HTTP/1.1" 200 -
+2026-06-28 02:10:41,923 - INFO - 127.0.0.1 - - [28/Jun/2026 02:10:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 02:14:27,030 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 02:14:43,449 - INFO -  * Restarting with stat
+2026-06-28 02:14:49,092 - WARNING -  * Debugger is active!
+2026-06-28 02:14:49,128 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:15:06,843 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 02:15:10,157 - INFO -  * Restarting with stat
+2026-06-28 02:15:25,595 - WARNING -  * Debugger is active!
+2026-06-28 02:15:26,016 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:23:18,496 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.231:5000
+2026-06-28 02:23:18,500 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-28 02:23:18,503 - INFO -  * Restarting with stat
+2026-06-28 02:23:32,080 - WARNING -  * Debugger is active!
+2026-06-28 02:23:32,091 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:29:15,477 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 02:29:16,854 - INFO -  * Restarting with stat
+2026-06-28 02:29:20,275 - WARNING -  * Debugger is active!
+2026-06-28 02:29:20,287 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:40:02,362 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 02:40:03,751 - INFO -  * Restarting with stat
+2026-06-28 02:40:08,987 - WARNING -  * Debugger is active!
+2026-06-28 02:40:09,002 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:43:33,508 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:43:40,432 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:43:45,711 - INFO - 127.0.0.1 - - [28/Jun/2026 02:43:45] "POST /process HTTP/1.1" 200 -
+2026-06-28 02:43:46,100 - INFO - 127.0.0.1 - - [28/Jun/2026 02:43:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 02:44:35,306 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:44:40,654 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:44:41,832 - INFO - 127.0.0.1 - - [28/Jun/2026 02:44:41] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 02:45:28,205 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:45:33,078 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:45:34,378 - INFO - 127.0.0.1 - - [28/Jun/2026 02:45:34] "POST /search_by_bill HTTP/1.1" 200 -
+2026-06-28 02:45:52,439 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:45:56,146 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:45:57,146 - INFO - 127.0.0.1 - - [28/Jun/2026 02:45:57] "POST /search_by_bill HTTP/1.1" 200 -
+2026-06-28 02:46:19,817 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:46:26,284 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:46:27,538 - INFO - 127.0.0.1 - - [28/Jun/2026 02:46:27] "POST /search_by_bill HTTP/1.1" 200 -
+2026-06-28 02:54:45,916 - INFO -  * Detected change in 'C:\\Users\\Administrator\\OneDrive\\Documents\\Association-rules\\app.py', reloading
+2026-06-28 02:54:51,097 - INFO -  * Restarting with stat
+2026-06-28 02:54:56,263 - WARNING -  * Debugger is active!
+2026-06-28 02:54:56,286 - INFO -  * Debugger PIN: 872-331-765
+2026-06-28 02:58:14,026 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:58:17,624 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:58:21,731 - INFO - 127.0.0.1 - - [28/Jun/2026 02:58:21] "POST /process HTTP/1.1" 200 -
+2026-06-28 02:58:21,980 - INFO - 127.0.0.1 - - [28/Jun/2026 02:58:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-28 02:58:42,725 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:58:47,900 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:58:49,753 - INFO - 127.0.0.1 - - [28/Jun/2026 02:58:49] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 02:59:03,583 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:59:07,178 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:59:08,134 - INFO - 127.0.0.1 - - [28/Jun/2026 02:59:08] "POST /search_by_bill HTTP/1.1" 200 -
+2026-06-28 02:59:29,253 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:59:32,629 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:59:33,560 - INFO - 127.0.0.1 - - [28/Jun/2026 02:59:33] "POST /search_by_bill HTTP/1.1" 200 -
+2026-06-28 02:59:51,817 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 02:59:56,088 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 02:59:57,142 - INFO - 127.0.0.1 - - [28/Jun/2026 02:59:57] "POST /get_rule_transactions HTTP/1.1" 200 -
+2026-06-28 02:59:59,598 - INFO - Starting preprocessing for file: uploads\908e2bdc9bca4edd8ea4bec6db99d2bc.csv
+2026-06-28 03:00:03,019 - INFO - Found 43 duplicate rows in cleaned data.
+2026-06-28 03:00:04,065 - INFO - 127.0.0.1 - - [28/Jun/2026 03:00:04] "POST /search_by_bill HTTP/1.1" 200 -
