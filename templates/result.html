@@ -136,9 +136,11 @@
                         <div class="card card-premium shadow-sm">
                             <div class="card-header bg-white border-bottom py-3">
                                 <h5 class="fw-bold mb-0 text-primary">
-                                    <i class="fa-solid fa-magnifying-glass me-2"></i>Pencarian Detail Transaksi (Bill Number)
+                                    <i class="fa-solid fa-magnifying-glass me-2"></i>Pencarian Detail Transaksi (Bill
+                                    Number)
                                 </h5>
-                                <p class="text-muted small mb-0 mt-1">Cari dan lacak status transaksi dari dataset mentah hingga menjadi basket transaksi</p>
+                                <p class="text-muted small mb-0 mt-1">Cari dan lacak status transaksi dari dataset
+                                    mentah hingga menjadi basket transaksi</p>
                             </div>
                             <div class="card-body">
                                 <div class="row align-items-center g-3">
@@ -147,16 +149,19 @@
                                             <span class="input-group-text bg-white border-end-0">
                                                 <i class="fa-solid fa-receipt text-muted"></i>
                                             </span>
-                                            <input type="text" id="billSearchInput" class="form-control border-start-0 ps-0" 
+                                            <input type="text" id="billSearchInput"
+                                                class="form-control border-start-0 ps-0"
                                                 placeholder="Masukkan Nomor Struk / Bill Number (contoh: 2306-001) lalu tekan Enter..."
                                                 onkeydown="if(event.key === 'Enter') searchBillLifecycle()">
                                         </div>
                                     </div>
                                     <div class="col-md-4 d-flex gap-2">
-                                        <button class="btn btn-primary w-100 rounded-pill" onclick="searchBillLifecycle()">
+                                        <button class="btn btn-primary w-100 rounded-pill"
+                                            onclick="searchBillLifecycle()">
                                             <i class="fa-solid fa-search me-1"></i> Cari Transaksi
                                         </button>
-                                        <button class="btn btn-outline-secondary rounded-pill" onclick="clearAllBillSearches()" id="clearSearchBtn" style="display:none;">
+                                        <button class="btn btn-outline-secondary rounded-pill"
+                                            onclick="clearAllBillSearches()" id="clearSearchBtn" style="display:none;">
                                             <i class="fa-solid fa-xmark"></i> Clear All
                                         </button>
                                     </div>
@@ -164,7 +169,9 @@
 
                                 <!-- Riwayat Pencarian -->
                                 <div id="searchedBillsHistory" class="mt-3 p-3 bg-light rounded border d-none">
-                                    <span class="text-muted small fw-bold d-block mb-2"><i class="fa-solid fa-history me-1 text-primary"></i>Riwayat Pencarian (Klik untuk berpindah detail):</span>
+                                    <span class="text-muted small fw-bold d-block mb-2"><i
+                                            class="fa-solid fa-history me-1 text-primary"></i>Riwayat Pencarian (Klik
+                                        untuk berpindah detail):</span>
                                     <div id="searchedBillsList" class="d-flex flex-wrap gap-2"></div>
                                 </div>
 
@@ -174,8 +181,11 @@
                                     <div class="alert alert-info d-flex align-items-center mb-3">
                                         <i class="fa-solid fa-circle-info fa-lg me-2"></i>
                                         <div class="w-100 d-flex justify-content-between align-items-center">
-                                            <span>Hasil Pelacakan Transaksi untuk Bill: <strong id="searchBillNumberTitle">-</strong></span>
-                                            <button type="button" class="btn-close" onclick="removeSearchedBill(activeSearchedBill)" aria-label="Close"></button>
+                                            <span>Hasil Pelacakan Transaksi untuk Bill: <strong
+                                                    id="searchBillNumberTitle">-</strong></span>
+                                            <button type="button" class="btn-close"
+                                                onclick="removeSearchedBill(activeSearchedBill)"
+                                                aria-label="Close"></button>
                                         </div>
                                     </div>
 
@@ -183,13 +193,18 @@
                                         <!-- Column 1: Raw Data -->
                                         <div class="col-lg-4">
                                             <div class="card shadow-sm border h-100">
-                                                <div class="card-header bg-light py-2 d-flex justify-content-between align-items-center">
-                                                    <span class="fw-bold text-dark small"><i class="fa-solid fa-file-csv me-1 text-secondary"></i>1. Dataset Mentah (Asli)</span>
-                                                    <span class="badge bg-secondary" id="rawSearchCountBadge">0 Baris</span>
+                                                <div
+                                                    class="card-header bg-light py-2 d-flex justify-content-between align-items-center">
+                                                    <span class="fw-bold text-dark small"><i
+                                                            class="fa-solid fa-file-csv me-1 text-secondary"></i>1.
+                                                        Dataset Mentah (Asli)</span>
+                                                    <span class="badge bg-secondary" id="rawSearchCountBadge">0
+                                                        Baris</span>
                                                 </div>
                                                 <div class="card-body p-2" style="max-height: 250px; overflow-y: auto;">
                                                     <div class="table-responsive">
-                                                        <table class="table table-sm table-striped table-bordered mb-0" style="font-size:0.8rem;">
+                                                        <table class="table table-sm table-striped table-bordered mb-0"
+                                                            style="font-size:0.8rem;">
                                                             <thead>
                                                                 <tr id="rawSearchHeader"></tr>
                                                             </thead>
@@ -203,13 +218,18 @@
                                         <!-- Column 2: Cleaned Data -->
                                         <div class="col-lg-4">
                                             <div class="card shadow-sm border h-100">
-                                                <div class="card-header bg-light py-2 d-flex justify-content-between align-items-center">
-                                                    <span class="fw-bold text-dark small"><i class="fa-solid fa-wand-magic-sparkles me-1 text-success"></i>2. Setelah Preprocessing</span>
-                                                    <span class="badge bg-success" id="cleanSearchCountBadge">0 Baris</span>
+                                                <div
+                                                    class="card-header bg-light py-2 d-flex justify-content-between align-items-center">
+                                                    <span class="fw-bold text-dark small"><i
+                                                            class="fa-solid fa-wand-magic-sparkles me-1 text-success"></i>2.
+                                                        Setelah Preprocessing</span>
+                                                    <span class="badge bg-success" id="cleanSearchCountBadge">0
+                                                        Baris</span>
                                                 </div>
                                                 <div class="card-body p-2" style="max-height: 250px; overflow-y: auto;">
                                                     <div class="table-responsive">
-                                                        <table class="table table-sm table-striped table-bordered mb-0" style="font-size:0.8rem;">
+                                                        <table class="table table-sm table-striped table-bordered mb-0"
+                                                            style="font-size:0.8rem;">
                                                             <thead>
                                                                 <tr id="cleanSearchHeader"></tr>
                                                             </thead>
@@ -224,11 +244,16 @@
                                         <div class="col-lg-4">
                                             <div class="card shadow-sm border h-100">
                                                 <div class="card-header bg-light py-2">
-                                                    <span class="fw-bold text-dark small"><i class="fa-solid fa-basket-shopping me-1 text-indigo"></i>3. Basket Transaksi (One-Hot)</span>
+                                                    <span class="fw-bold text-dark small"><i
+                                                            class="fa-solid fa-basket-shopping me-1 text-indigo"></i>3.
+                                                        Basket Transaksi (One-Hot)</span>
                                                 </div>
                                                 <div class="card-body">
-                                                    <div id="basketSearchContainer" class="d-flex flex-wrap gap-1"></div>
-                                                    <div id="basketSearchEmpty" class="text-muted small text-center py-3">Tidak masuk kriteria basket (jumlah item &lt; 2 setelah pembersihan).</div>
+                                                    <div id="basketSearchContainer" class="d-flex flex-wrap gap-1">
+                                                    </div>
+                                                    <div id="basketSearchEmpty"
+                                                        class="text-muted small text-center py-3">Tidak masuk kriteria
+                                                        basket (jumlah item &lt; 2 setelah pembersihan).</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -236,7 +261,9 @@
 
                                     <!-- Status / Log explanation logic -->
                                     <div class="mt-3 p-3 bg-light rounded border">
-                                        <h6 class="fw-bold text-dark mb-1" style="font-size:0.9rem;"><i class="fa-solid fa-route me-1 text-indigo"></i>Analisis Aliran Preprocessing:</h6>
+                                        <h6 class="fw-bold text-dark mb-1" style="font-size:0.9rem;"><i
+                                                class="fa-solid fa-route me-1 text-indigo"></i>Analisis Aliran
+                                            Preprocessing:</h6>
                                         <div class="small text-muted" id="searchAnalysisExplanation"></div>
                                     </div>
                                 </div>
@@ -369,7 +396,9 @@
                                             </table>
                                         </div>
                                         <div class="mt-2 text-muted small">
-                                            <i class="fa-solid fa-circle-info me-1"></i> Menampilkan semua kolom dataset mentah asli (sebelum preprocessing). Total data: <strong>{{ stats.total_baris_raw }}</strong> baris.
+                                            <i class="fa-solid fa-circle-info me-1"></i> Menampilkan semua kolom dataset
+                                            mentah asli (sebelum preprocessing). Total data: <strong>{{
+                                                stats.total_baris_raw }}</strong> baris.
                                         </div>
                                     </div>
 
@@ -425,9 +454,13 @@
                                         <!-- Active bill filter tags -->
                                         <div id="basketFilterTagsBar" class="d-none mb-3">
                                             <div class="d-flex align-items-center flex-wrap gap-2">
-                                                <span class="text-muted small fw-semibold me-1"><i class="fa-solid fa-filter me-1"></i>Filter aktif:</span>
-                                                <div id="basketFilterTags" class="d-flex flex-wrap gap-1"></div>
-                                                <button class="btn btn-sm btn-outline-secondary rounded-pill ms-auto" onclick="clearBasketFilter(basketTableInstance)">
+                                                <span class="text-dark small fw-semibold me-1"><i
+                                                        class="fa-solid fa-filter me-1 text-danger"></i>Filter
+                                                    aktif:</span>
+                                                <div id="basketFilterTags" class="d-flex flex-wrap gap-1 text-danger">
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-secondary rounded-pill ms-auto"
+                                                    onclick="clearBasketFilter(basketTableInstance)">
                                                     <i class="fa-solid fa-xmark me-1"></i>Reset & Tampilkan Semua
                                                 </button>
                                             </div>
@@ -460,50 +493,69 @@
                                             </table>
                                         </div>
                                         <div class="mt-2 text-muted small">
-                                            <i class="fa-solid fa-circle-info me-1"></i> Masukkan Bill Number di kolom pencarian dan tekan <kbd>Enter</kbd> untuk menampilkan data. Total transaksi terdaftar: <strong>{{ stats.total_transaksi }}</strong>, transaksi multi-item: <strong>{{ stats.total_transaksi_multi }}</strong>.
+                                            <i class="fa-solid fa-circle-info me-1"></i> Masukkan Bill Number di kolom
+                                            pencarian dan tekan <kbd>Enter</kbd> untuk menampilkan data. Total transaksi
+                                            terdaftar: <strong>{{ stats.total_transaksi }}</strong>, transaksi
+                                            multi-item: <strong>{{ stats.total_transaksi_multi }}</strong>.
                                         </div>
                                     </div>
 
                                     <!-- Log Preview Panel -->
                                     <div class="tab-pane fade" id="log-preview-panel" role="tabpanel">
                                         <div class="p-3">
-                                            <h6 class="fw-bold"><i class="fa-solid fa-clipboard-list me-2"></i>Ringkasan Data yang Dihapus</h6>
+                                            <h6 class="fw-bold"><i class="fa-solid fa-clipboard-list me-2"></i>Ringkasan
+                                                Data yang Dihapus</h6>
                                             <ul class="list-group mb-4">
-                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
                                                     <div>
                                                         <strong>Data dengan Nama Produk Kosong</strong>
-                                                        <div class="small text-muted">Baris dimana kolom nama produk bernilai null/kosong.</div>
+                                                        <div class="small text-muted">Baris dimana kolom nama produk
+                                                            bernilai null/kosong.</div>
                                                     </div>
-                                                    <span class="badge bg-danger rounded-pill px-3">{{ stats.missing_product_name }}</span>
+                                                    <span class="badge bg-danger rounded-pill px-3">{{
+                                                        stats.missing_product_name }}</span>
                                                 </li>
-                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
                                                     <div>
                                                         <strong>Data dengan Nomor Transaksi Kosong</strong>
-                                                        <div class="small text-muted">Baris dimana kolom nomor transaksi/struk bernilai null/kosong.</div>
+                                                        <div class="small text-muted">Baris dimana kolom nomor
+                                                            transaksi/struk bernilai null/kosong.</div>
                                                     </div>
-                                                    <span class="badge bg-danger rounded-pill px-3">{{ stats.missing_bill_number }}</span>
+                                                    <span class="badge bg-danger rounded-pill px-3">{{
+                                                        stats.missing_bill_number }}</span>
                                                 </li>
-                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
                                                     <div>
                                                         <strong>Data Duplikat</strong>
-                                                        <div class="small text-muted">Barang yang sama terekam berulang kali di transaksi yang sama.</div>
+                                                        <div class="small text-muted">Barang yang sama terekam berulang
+                                                            kali di transaksi yang sama.</div>
                                                     </div>
-                                                    <span class="badge bg-warning text-dark rounded-pill px-3">{{ stats.duplicate_rows }}</span>
+                                                    <span class="badge bg-warning text-dark rounded-pill px-3">{{
+                                                        stats.duplicate_rows }}</span>
                                                 </li>
-                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
                                                     <div>
                                                         <strong>Data 'Menu Paket' (Filter Bundling)</strong>
-                                                        <div class="small text-muted">Item yang termasuk kategori menu paket yang dihapus untuk menghindari bias.</div>
+                                                        <div class="small text-muted">Item yang termasuk kategori menu
+                                                            paket yang dihapus untuk menghindari bias.</div>
                                                     </div>
-                                                    <span class="badge bg-info text-dark rounded-pill px-3">{{ stats.menu_paket_removed | default(0) }}</span>
+                                                    <span class="badge bg-info text-dark rounded-pill px-3">{{
+                                                        stats.menu_paket_removed | default(0) }}</span>
                                                 </li>
                                             </ul>
-                                            
+
                                             {% if duplicates_preview and duplicates_preview|length > 0 %}
-                                            <h6 class="fw-bold"><i class="fa-solid fa-copy me-2"></i>Contoh Data Duplikat yang Terdeteksi</h6>
+                                            <h6 class="fw-bold"><i class="fa-solid fa-copy me-2"></i>Contoh Data
+                                                Duplikat yang Terdeteksi</h6>
                                             <p class="text-muted small mb-2">
                                                 <i class="fa-solid fa-circle-info me-1"></i>
-                                                Bill Number di bawah ini sesuai dengan data di tab <strong>Dataset Mentah</strong>. Cari menggunakan kolom <strong>{{ bill_col }}</strong>.
+                                                Bill Number di bawah ini sesuai dengan data di tab <strong>Dataset
+                                                    Mentah</strong>. Cari menggunakan kolom <strong>{{ bill_col
+                                                    }}</strong>.
                                             </p>
                                             <div class="table-responsive-custom border rounded">
                                                 <table class="table table-custom table-sm mb-0">
@@ -517,24 +569,30 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                         {% for row in duplicates_preview %}
-                                                         <tr>
-                                                             <td>
-                                                                 <a href="javascript:void(0)" class="badge bg-light text-dark border text-decoration-none" onclick="triggerGlobalBillSearch('{{ row[bill_col]|e }}')" title="Klik untuk melacak status preprocessing bill ini">
-                                                                     <i class="fa-solid fa-search text-primary me-1" style="font-size: 0.7rem;"></i>{{ row[bill_col] }}
-                                                                 </a>
-                                                             </td>
-                                                             <td>{{ row[name_col] }}</td>
-                                                             {% if category_col %}
-                                                             <td>{{ row.get(category_col, '-') }}</td>
-                                                             {% endif %}
-                                                         </tr>
-                                                         {% endfor %}
+                                                        {% for row in duplicates_preview %}
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:void(0)"
+                                                                    class="badge bg-light text-dark border text-decoration-none"
+                                                                    onclick="triggerGlobalBillSearch('{{ row[bill_col]|e }}')"
+                                                                    title="Klik untuk melacak status preprocessing bill ini">
+                                                                    <i class="fa-solid fa-search text-primary me-1"
+                                                                        style="font-size: 0.7rem;"></i>{{ row[bill_col]
+                                                                    }}
+                                                                </a>
+                                                            </td>
+                                                            <td>{{ row[name_col] }}</td>
+                                                            {% if category_col %}
+                                                            <td>{{ row.get(category_col, '-') }}</td>
+                                                            {% endif %}
+                                                        </tr>
+                                                        {% endfor %}
                                                     </tbody>
                                                 </table>
                                             </div>
                                             <div class="mt-2 text-muted small">
-                                                <i class="fa-solid fa-circle-info me-1"></i> Menampilkan seluruh data duplikat (termasuk data asli dan tiruannya).
+                                                <i class="fa-solid fa-circle-info me-1"></i> Menampilkan seluruh data
+                                                duplikat (termasuk data asli dan tiruannya).
                                             </div>
                                             {% endif %}
                                         </div>
@@ -1049,7 +1107,8 @@
                                                 generation</i> dengan memampatkan data ke dalam struktur
                                             <strong>FP-Tree</strong> dalam 2 kali pemindaian data. Pencarian itemset
                                             dilakukan langsung di memori secara rekursif, yang menghasilkan efisiensi
-                                            komputasi jauh lebih baik pada data besar.</li>
+                                            komputasi jauh lebih baik pada data besar.
+                                        </li>
                                         {% endif %}
                                 </ul>
 
@@ -1463,7 +1522,7 @@
         $(document).ready(function () {
             // Keluarkan tabel dari div table-responsive-custom agar dropdown dan pagination 
             // berada murni di luar area scroll tabel, tapi tetap dalam card
-            $('.table-custom').not('#modalTransactionTable').each(function() {
+            $('.table-custom').not('#modalTransactionTable').each(function () {
                 var $parent = $(this).parent();
                 if ($parent.hasClass('table-responsive-custom') || $parent.hasClass('table-responsive')) {
                     $parent.before($(this));
@@ -1477,8 +1536,8 @@
                 pageLength: 25,
                 // f = filter, tr = table, l = length, i = info, p = pagination
                 dom: "<'row mb-3'<'col-12 d-flex justify-content-end'f>>" +
-                     "<'table-responsive-custom'tr>" +
-                     "<'row mt-3'<'col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0'l><'col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center'<'small text-muted mb-2'i>p>>",
+                    "<'table-responsive-custom'tr>" +
+                    "<'row mt-3'<'col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0'l><'col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center'<'small text-muted mb-2'i>p>>",
                 language: {
                     search: "",
                     searchPlaceholder: "Cari data...",
@@ -1500,8 +1559,8 @@
             var basketTable = $('#basketPreviewTable').DataTable({
                 pageLength: 25,
                 dom: "<'row mb-3'<'col-12 d-flex justify-content-end'f>>" +
-                     "<'table-responsive-custom'tr>" +
-                     "<'row mt-3'<'col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0'l><'col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center'<'small text-muted mb-2'i>p>>",
+                    "<'table-responsive-custom'tr>" +
+                    "<'row mt-3'<'col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0'l><'col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center'<'small text-muted mb-2'i>p>>",
                 language: {
                     search: "",
                     searchPlaceholder: "Masukkan Bill Number & tekan Enter untuk mencari...",
@@ -1518,7 +1577,7 @@
                     }
                 },
                 // Sembunyikan semua baris awal — tampil hanya setelah user cari
-                searchCols: [ { search: '^$', regex: true }, null ]
+                searchCols: [{ search: '^$', regex: true }, null]
             });
 
             // Simpan referensi global agar bisa diakses dari fungsi clearBasketFilter
@@ -1526,12 +1585,12 @@
 
             // Bind Event Listener to the DataTable generated search input for basketPreviewTable
             // Cegah input biasa memicu filter DataTable
-            $('#basketPreviewTable_wrapper input[type="search"]').on('keyup input', function(event) {
+            $('#basketPreviewTable_wrapper input[type="search"]').on('keyup input', function (event) {
                 event.stopImmediatePropagation();
             });
 
             // Tangkap Enter: kosongkan input, cari & filter
-            $('#basketPreviewTable_wrapper input[type="search"]').on('keydown', function(event) {
+            $('#basketPreviewTable_wrapper input[type="search"]').on('keydown', function (event) {
                 if (event.key === 'Enter') {
                     event.preventDefault();
                     event.stopImmediatePropagation();
@@ -1738,7 +1797,7 @@
             const resultSection = document.getElementById('billSearchResultSection');
             resultSection.classList.remove('d-none');
             document.getElementById('searchBillNumberTitle').textContent = targetBill + ' (Mencari...)';
-            
+
             document.getElementById('rawSearchHeader').innerHTML = '';
             document.getElementById('rawSearchBody').innerHTML = '<tr><td class="text-center py-3"><div class="spinner-border spinner-border-sm text-primary" role="status"></div> Loading...</td></tr>';
             document.getElementById('cleanSearchHeader').innerHTML = '';
@@ -1759,33 +1818,33 @@
                     bill_number: targetBill
                 })
             })
-            .then(res => res.json())
-            .then(data => {
-                if (data.error) throw new Error(data.error);
-                
-                // Simpan ke riwayat/cache pencarian
-                searchedBills.push(targetBill);
-                searchedBillsData[targetBill] = data;
+                .then(res => res.json())
+                .then(data => {
+                    if (data.error) throw new Error(data.error);
 
-                // Render list riwayat pencarian
-                renderSearchedBillsList();
+                    // Simpan ke riwayat/cache pencarian
+                    searchedBills.push(targetBill);
+                    searchedBillsData[targetBill] = data;
 
-                // Tampilkan detail transaksi yang baru dicari
-                viewSearchedBill(targetBill);
-            })
-            .catch(err => {
-                document.getElementById('searchBillNumberTitle').textContent = targetBill + ' (Error)';
-                document.getElementById('searchAnalysisExplanation').innerHTML = `
+                    // Render list riwayat pencarian
+                    renderSearchedBillsList();
+
+                    // Tampilkan detail transaksi yang baru dicari
+                    viewSearchedBill(targetBill);
+                })
+                .catch(err => {
+                    document.getElementById('searchBillNumberTitle').textContent = targetBill + ' (Error)';
+                    document.getElementById('searchAnalysisExplanation').innerHTML = `
                     <div class="alert alert-danger mb-0">
                         <i class="fa-solid fa-triangle-exclamation me-1"></i> Gagal mencari transaksi: ${err.message || 'Terjadi kesalahan internal.'}
                     </div>`;
-            });
+                });
         }
 
         function renderSearchedBillsList() {
             const listEl = document.getElementById('searchedBillsList');
             const historyEl = document.getElementById('searchedBillsHistory');
-            
+
             if (searchedBills.length === 0) {
                 historyEl.classList.add('d-none');
                 listEl.innerHTML = '';
@@ -1826,7 +1885,7 @@
             const rawBody = document.getElementById('rawSearchBody');
             rawHeader.innerHTML = '';
             rawBody.innerHTML = '';
-            
+
             if (data.raw_rows && data.raw_rows.length > 0) {
                 const cols = Object.keys(data.raw_rows[0]);
                 cols.forEach(col => {
@@ -1834,7 +1893,7 @@
                     th.textContent = col;
                     rawHeader.appendChild(th);
                 });
-                
+
                 data.raw_rows.forEach(row => {
                     const tr = document.createElement('tr');
                     cols.forEach(col => {
@@ -1856,7 +1915,7 @@
             const cleanBody = document.getElementById('cleanSearchBody');
             cleanHeader.innerHTML = '';
             cleanBody.innerHTML = '';
-            
+
             if (data.clean_rows && data.clean_rows.length > 0) {
                 const cols = Object.keys(data.clean_rows[0]);
                 cols.forEach(col => {
@@ -1864,7 +1923,7 @@
                     th.textContent = col;
                     cleanHeader.appendChild(th);
                 });
-                
+
                 data.clean_rows.forEach(row => {
                     const tr = document.createElement('tr');
                     cols.forEach(col => {
@@ -1898,7 +1957,7 @@
             const basketContainer = document.getElementById('basketSearchContainer');
             const basketEmpty = document.getElementById('basketSearchEmpty');
             basketContainer.innerHTML = '';
-            
+
             if (data.basket_items && data.basket_items.length > 0) {
                 basketEmpty.style.display = 'none';
                 data.basket_items.forEach(product => {
@@ -1914,11 +1973,11 @@
             // 4. Render Preprocessing Flow Analysis
             const explanation = document.getElementById('searchAnalysisExplanation');
             let explanationHTML = '';
-            
+
             const rawLen = data.raw_rows ? data.raw_rows.length : 0;
             const cleanLen = data.clean_rows ? data.clean_rows.length : 0;
             const basketLen = data.basket_items ? data.basket_items.length : 0;
-            
+
             if (rawLen === 0) {
                 explanationHTML = `
                     <div class="d-flex align-items-center text-danger gap-2">
@@ -1927,7 +1986,7 @@
                     </div>`;
             } else {
                 explanationHTML += `<li>Ditemukan <strong>${rawLen}</strong> baris item di dataset mentah.</li>`;
-                
+
                 if (cleanLen === 0) {
                     explanationHTML += `
                         <li class="text-danger">
@@ -1944,7 +2003,7 @@
                     } else {
                         explanationHTML += `<li>Semua data bersih berhasil lolos preprocessing (tidak ada data kosong atau menu paket yang dihapus).</li>`;
                     }
-                    
+
                     if (basketLen === 0) {
                         explanationHTML += `
                             <li class="text-warning">
@@ -1960,7 +2019,7 @@
                     }
                 }
             }
-            
+
             explanation.innerHTML = `<ul class="mb-0 ps-3">${explanationHTML}</ul>`;
         }
 
@@ -2012,12 +2071,12 @@
             }
             tagsBar.classList.remove('d-none');
 
-            searchedBasketBills.forEach(function(bill) {
+            searchedBasketBills.forEach(function (bill) {
                 var tag = document.createElement('span');
-                tag.className = 'badge rounded-pill bg-indigo d-inline-flex align-items-center gap-1 px-2 py-1';
+                tag.className = 'badge rounded-pill bg-indigo d-inline-flex align-items-center gap-1 px-2 py-1 text-secondary';
                 tag.style.fontSize = '0.8rem';
-                tag.innerHTML = `<i class="fa-solid fa-receipt"></i>${bill}<button type="button" class="btn-close btn-close-white ms-1" style="font-size:0.55rem" aria-label="Hapus"></button>`;
-                tag.querySelector('.btn-close').addEventListener('click', function() {
+                tag.innerHTML = `<i class="fa-solid fa-receipt"></i>${bill}<button type="button" class="btn-close btn-close-danger ms-1" style="font-size:0.55rem" aria-label="Hapus"></button>`;
+                tag.querySelector('.btn-close').addEventListener('click', function () {
                     removeBasketBillFilter(bill, basketTable);
                 });
                 tagsContainer.appendChild(tag);
@@ -2025,7 +2084,7 @@
         }
 
         function removeBasketBillFilter(bill, basketTable) {
-            searchedBasketBills = searchedBasketBills.filter(function(b) { return b !== bill; });
+            searchedBasketBills = searchedBasketBills.filter(function (b) { return b !== bill; });
             applyBasketTableFilter(basketTable);
             renderBasketFilterTags(basketTable);
         }
@@ -2049,7 +2108,7 @@
 
             // Periksa apakah bill number ada di data yang sudah dimuat di DataTable
             var existsInTable = false;
-            basketTable.rows().every(function() {
+            basketTable.rows().every(function () {
                 var cellVal = String(this.data()[0]).trim();
                 if (cellVal === targetBill) {
                     existsInTable = true;
@@ -2081,37 +2140,37 @@
                         bill_number: targetBill
                     })
                 })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.error) throw new Error(data.error);
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) throw new Error(data.error);
 
-                    // Buat string produk (comma-separated) sama seperti format basket_preview
-                    let productsStr = '';
-                    if (data.basket_items && data.basket_items.length > 0) {
-                        productsStr = data.basket_items.join(', ');
-                    } else {
-                        productsStr = '(Tidak masuk kriteria basket — item < 2 setelah pembersihan)';
-                    }
+                        // Buat string produk (comma-separated) sama seperti format basket_preview
+                        let productsStr = '';
+                        if (data.basket_items && data.basket_items.length > 0) {
+                            productsStr = data.basket_items.join(', ');
+                        } else {
+                            productsStr = '(Tidak masuk kriteria basket — item < 2 setelah pembersihan)';
+                        }
 
-                    // Tambahkan baris baru ke DataTable agar bisa difilter
-                    var rowNode = basketTable.row.add([
-                        targetBill,
-                        productsStr
-                    ]).draw(false).node();
+                        // Tambahkan baris baru ke DataTable agar bisa difilter
+                        var rowNode = basketTable.row.add([
+                            targetBill,
+                            productsStr
+                        ]).draw(false).node();
 
-                    if (rowNode) {
-                        $(rowNode).addClass('table-success');
-                        setTimeout(function() { $(rowNode).removeClass('table-success'); }, 4000);
-                    }
+                        if (rowNode) {
+                            $(rowNode).addClass('table-success');
+                            setTimeout(function () { $(rowNode).removeClass('table-success'); }, 4000);
+                        }
 
-                    // Terapkan filter
-                    searchedBasketBills.push(targetBill);
-                    applyBasketTableFilter(basketTable);
-                    renderBasketFilterTags(basketTable);
-                })
-                .catch(err => {
-                    alert(`Gagal mencari transaksi "${targetBill}": ${err.message || 'Terjadi kesalahan server.'}`);
-                });
+                        // Terapkan filter
+                        searchedBasketBills.push(targetBill);
+                        applyBasketTableFilter(basketTable);
+                        renderBasketFilterTags(basketTable);
+                    })
+                    .catch(err => {
+                        alert(`Gagal mencari transaksi "${targetBill}": ${err.message || 'Terjadi kesalahan server.'}`);
+                    });
             }
         }
 
