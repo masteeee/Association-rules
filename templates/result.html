@@ -2047,12 +2047,72 @@
                 return;
             }
 
-            // Tambahkan ke filter list, lalu terapkan filter.
-            // Data dari server-side Jinja sudah ada di tabel (basket_preview),
-            // sehingga kita hanya perlu filter baris yang ada.
-            searchedBasketBills.push(targetBill);
-            applyBasketTableFilter(basketTable);
-            renderBasketFilterTags(basketTable);
+            // Periksa apakah bill number ada di data yang sudah dimuat di DataTable
+            var existsInTable = false;
+            basketTable.rows().every(function() {
+                var cellVal = String(this.data()[0]).trim();
+                if (cellVal === targetBill) {
+                    existsInTable = true;
+                    return false; // stop iteration
+                }
+            });
+
+            if (existsInTable) {
+                // Data sudah ada di tabel, langsung filter
+                searchedBasketBills.push(targetBill);
+                applyBasketTableFilter(basketTable);
+                renderBasketFilterTags(basketTable);
+            } else {
+                // Data tidak ada di 100 baris awal yang dimuat — ambil dari server
+                const cfg = document.getElementById('dataset-config');
+                const uniqueFilename = cfg.getAttribute('data-unique-filename');
+                const billCol = cfg.getAttribute('data-bill-col');
+                const nameCol = cfg.getAttribute('data-name-col');
+                const categoryCol = cfg.getAttribute('data-category-col');
+
+                fetch('/search_by_bill', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        unique_filename: uniqueFilename,
+                        bill_col: billCol,
+                        name_col: nameCol,
+                        category_col: categoryCol,
+                        bill_number: targetBill
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.error) throw new Error(data.error);
+
+                    // Buat string produk (comma-separated) sama seperti format basket_preview
+                    let productsStr = '';
+                    if (data.basket_items && data.basket_items.length > 0) {
+                        productsStr = data.basket_items.join(', ');
+                    } else {
+                        productsStr = '(Tidak masuk kriteria basket — item < 2 setelah pembersihan)';
+                    }
+
+                    // Tambahkan baris baru ke DataTable agar bisa difilter
+                    var rowNode = basketTable.row.add([
+                        targetBill,
+                        productsStr
+                    ]).draw(false).node();
+
+                    if (rowNode) {
+                        $(rowNode).addClass('table-success');
+                        setTimeout(function() { $(rowNode).removeClass('table-success'); }, 4000);
+                    }
+
+                    // Terapkan filter
+                    searchedBasketBills.push(targetBill);
+                    applyBasketTableFilter(basketTable);
+                    renderBasketFilterTags(basketTable);
+                })
+                .catch(err => {
+                    alert(`Gagal mencari transaksi "${targetBill}": ${err.message || 'Terjadi kesalahan server.'}`);
+                });
+            }
         }
 
         function applyBasketTableFilter(basketTable) {
